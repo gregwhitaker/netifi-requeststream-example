@@ -1,0 +1,21 @@
+  syntax = "proto3";
+
+package example.service.letter;
+
+option java_package = "example.service.letter.protobuf";
+option java_outer_classname = "LetterServiceProto";
+option java_multiple_files = true;
+
+service LetterService {
+
+    // Returns a stream of random letters (lowercase)
+    rpc GetLetters (LetterRequest) returns (stream LetterResponse) {}
+}
+
+message LetterRequest {
+    int64 numLetters = 1;
+}
+
+message LetterResponse {
+    string letter = 1;
+}
