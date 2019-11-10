@@ -1,6 +1,8 @@
 # netifi-requeststream-example
 An example of the request-stream interaction model and aggregating streams, as well as tag-based routing, with [Netifi](https://www.netifi.com) and [RSocket](http://rsocket.io).
 
+This example aggregates two different microservices, one that emits random letters, and one that emits random numbers into letter-number pairs.
+
 ## Project Structure
 This example contains the following projects:
 
@@ -24,7 +26,10 @@ Run the following command to build the example:
     ./gradlew clean build
     
 ## Running the Example
-Follow the steps below to run the example:
+Follow the steps below to run the example.
+
+### Request-Stream
+Follow the steps below to run the example that shows aggregating two request-streams:
 
 1. Run the following command to start a local Netifi Broker:
 
@@ -57,12 +62,15 @@ Follow the steps below to run the example:
         2019-11-10 14:47:01,508 INFO e.c.RunLettersStream [reactor-tcp-nio-4] u26
         2019-11-10 14:47:02,515 INFO e.c.RunLettersStream [reactor-tcp-nio-4] f41
         2019-11-10 14:47:03,519 INFO e.c.RunLettersStream [reactor-tcp-nio-4] z25
-        
-5. In a new terminal, run the following command to start the `letter2-service`:
+
+### Request-Response
+Follow the steps below to run the example that shows aggregating request-response interactions where the letter data is load-balanced between `letter-service` and `letter2-service`:
+    
+1. In a new terminal, run the following command to start the `letter2-service`:
 
         ./gradlew :letter2-service:run
         
-6. In a new terminal, run the following command to start the client and load-balance between both `letter-service` instances and the `number-service`:
+2. In a new terminal, run the following command to start the client and load-balance between both `letter-service` instances and the `number-service`:
 
         ./gradlew :client:runLetter
         
