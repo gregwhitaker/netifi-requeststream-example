@@ -47,6 +47,41 @@ Follow the steps below to run the example:
 4. In a new terminal, run the following command to start the client and stream from both the `letter-service` and `number-service`:
 
         ./gradlew :client:runLetters
+        
+    If successful, you will see letters and numbers aggregated together every second similar to the following:
+
+        2019-11-10 14:46:57,494 INFO e.c.RunLettersStream [reactor-tcp-nio-4] a38
+        2019-11-10 14:46:58,496 INFO e.c.RunLettersStream [reactor-tcp-nio-4] o75
+        2019-11-10 14:46:59,501 INFO e.c.RunLettersStream [reactor-tcp-nio-4] x32
+        2019-11-10 14:47:00,504 INFO e.c.RunLettersStream [reactor-tcp-nio-4] m84
+        2019-11-10 14:47:01,508 INFO e.c.RunLettersStream [reactor-tcp-nio-4] u26
+        2019-11-10 14:47:02,515 INFO e.c.RunLettersStream [reactor-tcp-nio-4] f41
+        2019-11-10 14:47:03,519 INFO e.c.RunLettersStream [reactor-tcp-nio-4] z25
+        
+5. In a new terminal, run the following command to start the `letter2-service`:
+
+        ./gradlew :letter2-service:run
+        
+6. In a new terminal, run the following command to start the client and load-balance between both `letter-service` instances and the `number-service`:
+
+        ./gradlew :client:runLetter
+        
+    If successful, you will see letters and numbers aggregated and note that the letters are both uppercase and lowercase similar to the following:
+
+        2019-11-10 14:51:31,564 INFO e.c.RunLettersStream [reactor-tcp-nio-4] N51
+        2019-11-10 14:51:31,564 INFO e.c.RunLettersStream [reactor-tcp-nio-4] I84
+        2019-11-10 14:51:31,565 INFO e.c.RunLettersStream [reactor-tcp-nio-4] X27
+        2019-11-10 14:51:31,566 INFO e.c.RunLettersStream [reactor-tcp-nio-4] P97
+        2019-11-10 14:51:31,566 INFO e.c.RunLettersStream [reactor-tcp-nio-4] D67
+        2019-11-10 14:51:31,567 INFO e.c.RunLettersStream [reactor-tcp-nio-4] l1
+        2019-11-10 14:51:31,567 INFO e.c.RunLettersStream [reactor-tcp-nio-4] A16
+        2019-11-10 14:51:31,567 INFO e.c.RunLettersStream [reactor-tcp-nio-4] l32
+        2019-11-10 14:51:31,567 INFO e.c.RunLettersStream [reactor-tcp-nio-4] s19
+        2019-11-10 14:51:31,568 INFO e.c.RunLettersStream [reactor-tcp-nio-4] Y89
+        2019-11-10 14:51:31,568 INFO e.c.RunLettersStream [reactor-tcp-nio-4] O3
+        2019-11-10 14:51:31,568 INFO e.c.RunLettersStream [reactor-tcp-nio-4] K88
+        2019-11-10 14:51:31,569 INFO e.c.RunLettersStream [reactor-tcp-nio-4] o94
+        2019-11-10 14:51:31,569 INFO e.c.RunLettersStream [reactor-tcp-nio-4] I17
 
 ## License
 Copyright 2019 Greg Whitaker
