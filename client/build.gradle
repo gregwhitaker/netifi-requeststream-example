@@ -8,7 +8,6 @@ sourceCompatibility = 1.8
 
 dependencies {
     protobuf project(':letter-service-idl')
-    protobuf project(':letter2-service-idl')
     protobuf project(':number-service-idl')
 
     implementation "com.netifi:netifi-broker-client"

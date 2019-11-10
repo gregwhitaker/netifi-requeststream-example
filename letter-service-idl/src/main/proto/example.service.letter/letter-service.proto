@@ -13,7 +13,7 @@ service LetterService {
 }
 
 message LetterRequest {
-    int64 numLetters = 1;
+    int32 numLetters = 1;
 }
 
 message LetterResponse {

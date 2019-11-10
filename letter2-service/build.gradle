@@ -8,7 +8,7 @@ sourceCompatibility = 1.8
 mainClassName = 'example.service.letter2.Main'
 
 dependencies {
-    protobuf project(':letter2-service-idl')
+    protobuf project(':letter-service-idl')
 
     implementation "com.netifi:netifi-broker-client"
     implementation "com.google.protobuf:protobuf-java"
