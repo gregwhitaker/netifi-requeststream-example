@@ -8,7 +8,7 @@ This example contains the following projects:
 * [letter-service](letter-service) - Service that generates random letters.
 * [letter-service-idl](letter-service-idl) - Contract that defines the `letter-service` API.
 * [letter2-service](letter2-service) - Version 2 of the `letter-service` that adds capital letters.
-* [letter2-service-idl](letter-service-idl) - Contrat that defines the `letter2-service` API.
+* [letter2-service-idl](letter-service-idl) - Contract that defines the `letter2-service` API.
 * [number-service](number-service) - Service that generates random numbers.
 * [number-service-idl](number-service-idl) - Contract that defines the `number-service` API.
 
