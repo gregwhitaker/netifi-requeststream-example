@@ -3,7 +3,7 @@ An example of the request-stream interaction model and aggregating streams, as w
 
 This example aggregates two different microservices, one that emits random letters, and one that emits random numbers into letter-number pairs.
 
-![project-structure-image](image1.png)
+![project-structure-image](image-demo.png)
 
 ## Project Structure
 This example contains the following projects:
