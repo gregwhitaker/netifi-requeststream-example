@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package example.service.number;
+
+option java_package = "example.service.number.protobuf";
+option java_outer_classname = "NumberServiceProto";
+option java_multiple_files = true;
+
+service NumberService {
+
+    // Returns a stream of random numbers
+    rpc GetNumbers (NumberRequest) returns (stream NumberResponse) {}
+}
+
+message NumberRequest {
+    int32 numNumbers = 1;
+}
+
+message NumberResponse {
+    int32 number = 1;
+}
