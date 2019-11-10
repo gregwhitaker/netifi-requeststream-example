@@ -1,0 +1,11 @@
+rootProject.name = 'netifi-requeststream-example'
+include 'number-service-idl'
+include 'letter-service-idl'
+include 'number-service'
+include 'letter-service'
+include 'capitalletter-service-idl'
+include 'capitalletter-service'
+include 'letter2-service-idl'
+include 'letter2-service'
+include 'client'
+
