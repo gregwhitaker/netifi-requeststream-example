@@ -7,6 +7,9 @@ import example.service.letter.protobuf.LetterServiceServer;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * Starts the letter-service application.
+ */
 public class Main {
 
     public static void main(String... args) throws Exception {

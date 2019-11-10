@@ -7,6 +7,9 @@ import example.service.number.protobuf.NumberServiceServer;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * Starts the number-service application.
+ */
 public class Main {
 
     public static void main(String... args) throws Exception {
