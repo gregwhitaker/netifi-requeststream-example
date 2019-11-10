@@ -1,5 +1,5 @@
 # netifi-requeststream-example
-An example of the request-stream interaction model and aggregating streams, as well as tag-based routing, with [Netifi](https://www.netifi.com) and [RSocket](http://rsocket.io).
+An example of the request-stream interaction model and aggregating streams with [Netifi](https://www.netifi.com) and [RSocket](http://rsocket.io).
 
 This example aggregates two different microservices, one that emits random letters, and one that emits random numbers into letter-number pairs.
 
@@ -14,6 +14,11 @@ This example contains the following projects:
 * [letter2-service](letter2-service) - Version 2 of the `letter-service` that adds capital letters.
 * [number-service-idl](number-service-idl) - Contract that defines the `number-service` API.
 * [number-service](number-service) - Service that generates random numbers.
+
+## What is Netifi
+[Netifi](https://www.netifi.com) is a platform for building cloud-native applications with the power of [RSocket](http://rsocket.io).
+
+Netifi provides service discovery, load-balancing, streaming, and back-pressure without deploying a whole host of infrastructure components and without polluting your code with circuit breakers and client-side load-balancing. 
 
 ## Prerequisites
 This example requires a running instance of the Netifi Broker.
