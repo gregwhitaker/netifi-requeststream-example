@@ -2,14 +2,12 @@ plugins {
     id 'java'
 }
 
-version 'unspecified'
+sourceSets {
+    main {
+        resources { srcDir 'src/main/proto' }
+    }
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    test {
+        resources { srcDir 'src/test/proto' }
+    }
 }
