@@ -91,6 +91,9 @@ Follow the steps below to run the example that shows aggregating request-respons
         2019-11-10 14:51:31,569 INFO e.c.RunLettersStream [reactor-tcp-nio-4] o94
         2019-11-10 14:51:31,569 INFO e.c.RunLettersStream [reactor-tcp-nio-4] I17
 
+## Bugs and Feedback
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/netifi-requeststream-example/issues).
+
 ## License
 Copyright 2019 Greg Whitaker
 
