@@ -49,9 +49,9 @@ public class RunLetter2 {
                         .disableSsl()
                         .build();
 
-        // Connect to Netifi Platform
-        BrokerSocket letterConn = netifi.groupServiceSocket("example.service.letter");
-        BrokerSocket numberConn = netifi.groupServiceSocket("example.service.number", Tags.of("version", "2"));
+        // Connect to Netifi Platform (Tag-based routing only works in Enterprise edition)
+        BrokerSocket letterConn = netifi.groupServiceSocket("example.service.letter", Tags.of("version", "2"));
+        BrokerSocket numberConn = netifi.groupServiceSocket("example.service.number");
 
         LetterServiceClient letterClient = new LetterServiceClient(letterConn);
         NumberServiceClient numberClient = new NumberServiceClient(numberConn);
