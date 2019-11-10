@@ -13,7 +13,7 @@ service LetterService {
     // Returns a random letter
     rpc GetLetter (google.protobuf.Empty) returns (LetterResponse) {}
 
-    // Returns a stream of random letters (lowercase)
+    // Returns a stream of random letters
     rpc GetLetters (LetterRequest) returns (stream LetterResponse) {}
 }
 
