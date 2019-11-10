@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'application'
     id 'com.google.protobuf'
 }
 
@@ -17,7 +16,15 @@ dependencies {
     implementation "org.apache.logging.log4j:log4j-slf4j18-impl"
 }
 
-mainClassName = 'example.client.Main'
+task runLetters(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'example.client.RunLettersStream'
+}
+
+task runLetter(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'example.client.RunLetter'
+}
 
 protobuf {
     protoc {
