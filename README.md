@@ -1,6 +1,17 @@
 # netifi-requeststream-example
 An example of the request-stream interaction model and aggregating streams with [Netifi](https://www.netifi.com) and [RSocket](http://rsocket.io).
 
+## Project Structure
+This example contains the following projects:
+
+* [client](client) - Client application that streams and aggregated data from the backend services.
+* [letter-service](letter-service) - Service that generates random letters.
+* [letter-service-idl](letter-service-idl) - Contract that defines the `letter-service` API.
+* [letter2-service](letter2-service) - Version 2 of the `letter-service` that adds capital letters.
+* [letter2-service-idl](letter-service-idl) - Contrat that defines the `letter2-service` API.
+* [number-service](number-service) - Service that generates random numbers.
+* [number-service-idl](number-service-idl) - Contract that defines the `number-service` API.
+
 ## Building the Example
 Run the following command to build the example:
 
