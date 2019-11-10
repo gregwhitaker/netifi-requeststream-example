@@ -5,6 +5,11 @@ This example aggregates two different microservices, one that emits random lette
 
 ![project-structure-image](image-demo.png)
 
+## What is Netifi?
+[Netifi](https://www.netifi.com) is a platform for building cloud-native applications with the power of [RSocket](http://rsocket.io).
+
+Netifi provides service discovery, load-balancing, streaming, and back-pressure without deploying a whole host of infrastructure components and without polluting your code with circuit breakers and client-side load-balancing.
+
 ## Project Structure
 This example contains the following projects:
 
@@ -13,12 +18,7 @@ This example contains the following projects:
 * [letter-service](letter-service) - Service that generates random letters.
 * [letter2-service](letter2-service) - Version 2 of the `letter-service` that adds capital letters.
 * [number-service-idl](number-service-idl) - Contract that defines the `number-service` API.
-* [number-service](number-service) - Service that generates random numbers.
-
-## What is Netifi?
-[Netifi](https://www.netifi.com) is a platform for building cloud-native applications with the power of [RSocket](http://rsocket.io).
-
-Netifi provides service discovery, load-balancing, streaming, and back-pressure without deploying a whole host of infrastructure components and without polluting your code with circuit breakers and client-side load-balancing. 
+* [number-service](number-service) - Service that generates random numbers. 
 
 ## Prerequisites
 This example requires a running instance of the Netifi Broker.
