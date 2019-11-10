@@ -32,8 +32,8 @@ import java.util.concurrent.CountDownLatch;
 /**
  * Client that calls the letter (regardless of version) and number services and aggregates their data.
  */
-public class RunLetters {
-    private static final Logger LOG = LoggerFactory.getLogger(RunLetters.class);
+public class RunLettersStream {
+    private static final Logger LOG = LoggerFactory.getLogger(RunLettersStream.class);
 
     public static void main(String... args) throws Exception {
         // Build Netifi Broker Connection

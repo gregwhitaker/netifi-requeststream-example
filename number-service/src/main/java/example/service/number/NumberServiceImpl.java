@@ -37,7 +37,7 @@ public class NumberServiceImpl implements NumberService {
 
     @Override
     public Mono<NumberResponse> getNumber(Empty message, ByteBuf metadata) {
-        return Mono.just(NumberResponse.newBuilder()
+        return Mono.fromSupplier(() -> NumberResponse.newBuilder()
                 .setNumber(RAND.nextInt(100 - 1 + 1) + 1)
                 .build());
     }
