@@ -1,5 +1,7 @@
 plugins {
     id "com.gradle.build-scan" version "3.0"
+    id "io.spring.dependency-management" version "1.0.7.RELEASE" apply false
+    id 'com.google.protobuf' version '0.8.10' apply false
 }
 
 buildScan {
@@ -9,8 +11,31 @@ buildScan {
 }
 
 allprojects {
+    apply plugin: 'idea'
+
     repositories {
         mavenCentral()
         jcenter()
     }
 }
+
+subprojects {
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencyManagement {
+        imports {
+            mavenBom "com.netifi:netifi-bom:${netifiBomVersion}"
+            mavenBom "org.apache.logging.log4j:log4j-bom:${log4j2Version}"
+        }
+
+        dependencies {
+            dependency "com.google.protobuf:protobuf-java:${protobufVersion}"
+            dependency "com.google.protobuf:protoc:${protobufVersion}"
+            dependency "io.rsocket:rsocket-core:${rsocketVersion}"
+            dependency "io.rsocket:rsocket-transport-netty:${rsocketVersion}"
+            dependency "io.rsocket.rpc:rsocket-rpc-protobuf:${rsocketRpcVersion}"
+            dependency "io.rsocket.rpc:rsocket-rpc-core:${rsocketRpcVersion}"
+        }
+    }
+}
+
