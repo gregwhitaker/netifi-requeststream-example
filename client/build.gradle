@@ -1,15 +1,39 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'com.google.protobuf'
 }
-
-version 'unspecified'
 
 sourceCompatibility = 1.8
 
-repositories {
-    mavenCentral()
+dependencies {
+    protobuf project(':letter-service-idl')
+    protobuf project(':letter2-service-idl')
+    protobuf project(':number-service-idl')
+
+    implementation "com.netifi:netifi-broker-client"
+    implementation "com.google.protobuf:protobuf-java"
+    implementation "org.apache.logging.log4j:log4j-api"
+    implementation "org.apache.logging.log4j:log4j-core"
+    implementation "org.apache.logging.log4j:log4j-slf4j18-impl"
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+mainClassName = 'example.client.Main'
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc'
+    }
+    plugins {
+        rsocketRpc {
+            artifact = 'io.rsocket.rpc:rsocket-rpc-protobuf'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.plugins {
+                rsocketRpc {}
+            }
+        }
+    }
 }
