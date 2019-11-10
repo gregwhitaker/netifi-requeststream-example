@@ -15,7 +15,7 @@ This example contains the following projects:
 ## Prerequisites
 This example requires a running instance of the Netifi Broker.
 
-Run the following command to start a local instance of the Netifi Broker in a Docker container:
+Run the following command to download the [Netifi Community Edition Broker](https://www.netifi.com/netifi-ce) as a Docker container:
 
     docker pull netifi/broker:1.6.9
 
@@ -23,6 +23,8 @@ Run the following command to start a local instance of the Netifi Broker in a Do
 Run the following command to build the example:
 
     ./gradlew clean build
+    
+## Running the Example
 
 ## License
 Copyright 2019 Greg Whitaker
