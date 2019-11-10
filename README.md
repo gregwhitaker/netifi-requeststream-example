@@ -25,6 +25,9 @@ Run the following command to build the example:
     ./gradlew clean build
     
 ## Running the Example
+Follow the steps below to run the example:
+
+TBD
 
 ## License
 Copyright 2019 Greg Whitaker
