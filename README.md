@@ -1,5 +1,5 @@
 # netifi-requeststream-example
-An example of the request-stream interaction model and aggregating streams with [Netifi](https://www.netifi.com) and [RSocket](http://rsocket.io).
+An example of the request-stream interaction model and aggregating streams, as well as tag-based routing, with [Netifi](https://www.netifi.com) and [RSocket](http://rsocket.io).
 
 ## Project Structure
 This example contains the following projects:
