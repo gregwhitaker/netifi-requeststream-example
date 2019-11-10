@@ -26,7 +26,27 @@ Run the following command to build the example:
 ## Running the Example
 Follow the steps below to run the example:
 
-TBD
+1. Run the following command to start a local Netifi Broker:
+
+        docker run -p 8001:8001 -p 8101:8101 -p 7001:7001 -p 6001:6001 \
+        -e BROKER_SERVER_OPTS="'-Dnetifi.broker.admin.accessKey=8833333111127534' \
+        '-Dnetifi.broker.admin.accessToken=Ih+hNsSdxLxAtHceTeEia2MGXSc=' \
+        '-Dnetifi.authentication.0.accessKey=8833333111127534' \
+        '-Dnetifi.authentication.0.accessToken=Ih+hNsSdxLxAtHceTeEia2MGXSc=' \
+        '-Dnetifi.broker.ssl.disabled=true'" \
+        netifi/broker:1.6.9
+        
+2. In a new terminal, run the following command to start the `number-service`:
+
+        ./gradlew :number-service:run
+        
+3. In a new terminal, run the following command to start the `letter-service`:
+
+        ./gradlew :letter-service:run
+        
+4. In a new terminal, run the following command to start the client and stream from both the `letter-service` and `number-service`:
+
+        ./gradlew :client:runLetters
 
 ## License
 Copyright 2019 Greg Whitaker
