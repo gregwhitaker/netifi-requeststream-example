@@ -12,6 +12,13 @@ This example contains the following projects:
 * [number-service](number-service) - Service that generates random numbers.
 * [number-service-idl](number-service-idl) - Contract that defines the `number-service` API.
 
+## Prerequisites
+This example requires a running instance of the Netifi Broker.
+
+Run the following command to start a local instance of the Netifi Broker in a Docker container:
+
+    docker pull netifi/broker:1.6.9
+
 ## Building the Example
 Run the following command to build the example:
 
