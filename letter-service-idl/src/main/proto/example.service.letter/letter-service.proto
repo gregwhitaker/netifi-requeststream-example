@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+
 package example.service.letter;
 
 option java_package = "example.service.letter.protobuf";
@@ -7,6 +9,9 @@ option java_outer_classname = "LetterServiceProto";
 option java_multiple_files = true;
 
 service LetterService {
+
+    // Returns a random letter
+    rpc GetLetter (google.protobuf.Empty) returns (LetterResponse) {}
 
     // Returns a stream of random letters (lowercase)
     rpc GetLetters (LetterRequest) returns (stream LetterResponse) {}

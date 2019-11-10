@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+
 package example.service.number;
 
 option java_package = "example.service.number.protobuf";
@@ -7,6 +9,9 @@ option java_outer_classname = "NumberServiceProto";
 option java_multiple_files = true;
 
 service NumberService {
+
+    // Returns a random number
+    rpc GetNumber (google.protobuf.Empty) returns (NumberResponse) {}
 
     // Returns a stream of random numbers
     rpc GetNumbers (NumberRequest) returns (stream NumberResponse) {}

@@ -41,8 +41,8 @@ public class RunLetters {
                 BrokerClient.tcp()
                         .group("example.client")                        // Group name of client
                         .destination("client1")                         // Name of this client instance
-                        .accessKey(9007199254740991L)
-                        .accessToken("kTBDVtfRBO4tHOnZzSyY5ym2kfY=")
+                        .accessKey(8833333111127534L)
+                        .accessToken("Ih+hNsSdxLxAtHceTeEia2MGXSc=")
                         .host("localhost")                              // Netifi Broker Host
                         .port(8001)                                     // Netifi Broker Port
                         .disableSsl()

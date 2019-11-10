@@ -15,6 +15,7 @@
  */
 package example.service.number;
 
+import com.google.protobuf.Empty;
 import example.service.number.protobuf.NumberRequest;
 import example.service.number.protobuf.NumberResponse;
 import example.service.number.protobuf.NumberService;
@@ -22,6 +23,7 @@ import io.netty.buffer.ByteBuf;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.time.Duration;
 import java.util.Random;
@@ -32,6 +34,13 @@ import java.util.Random;
 public class NumberServiceImpl implements NumberService {
     private static final Logger LOG = LoggerFactory.getLogger(NumberServiceImpl.class);
     private static final Random RAND = new Random(System.currentTimeMillis());
+
+    @Override
+    public Mono<NumberResponse> getNumber(Empty message, ByteBuf metadata) {
+        return Mono.just(NumberResponse.newBuilder()
+                .setNumber(RAND.nextInt(100 - 1 + 1) + 1)
+                .build());
+    }
 
     @Override
     public Flux<NumberResponse> getNumbers(NumberRequest message, ByteBuf metadata) {

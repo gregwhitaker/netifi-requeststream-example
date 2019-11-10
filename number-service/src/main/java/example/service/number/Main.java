@@ -35,8 +35,8 @@ public class Main {
                 BrokerClient.tcp()
                         .group("example.service.number")                // Group name of service
                         .destination(serviceName)
-                        .accessKey(9007199254740991L)
-                        .accessToken("kTBDVtfRBO4tHOnZzSyY5ym2kfY=")
+                        .accessKey(8833333111127534L)
+                        .accessToken("Ih+hNsSdxLxAtHceTeEia2MGXSc=")
                         .host("localhost")                              // Netifi Broker Host
                         .port(8001)                                     // Netifi Broker Port
                         .disableSsl()
