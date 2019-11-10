@@ -15,7 +15,7 @@ This example contains the following projects:
 * [number-service-idl](number-service-idl) - Contract that defines the `number-service` API.
 * [number-service](number-service) - Service that generates random numbers.
 
-## What is Netifi
+## What is Netifi?
 [Netifi](https://www.netifi.com) is a platform for building cloud-native applications with the power of [RSocket](http://rsocket.io).
 
 Netifi provides service discovery, load-balancing, streaming, and back-pressure without deploying a whole host of infrastructure components and without polluting your code with circuit breakers and client-side load-balancing. 
