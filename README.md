@@ -13,7 +13,7 @@ Netifi provides service discovery, load-balancing, streaming, and back-pressure 
 ## Project Structure
 This example contains the following projects:
 
-* [client](client) - Client application that streams and aggregated data from the backend services.
+* [client](client) - Client application that streams and combines data from the backend services.
 * [letter-service-idl](letter-service-idl) - Contract that defines the `letter-service` and `letter2-service` APIs.
 * [letter-service](letter-service) - Service that generates random letters.
 * [letter2-service](letter2-service) - Version 2 of the `letter-service` that adds capital letters.
