@@ -28,7 +28,7 @@ import java.util.UUID;
 public class Main {
 
     public static void main(String... args) throws Exception {
-        String serviceName = "letterservice-" + UUID.randomUUID().toString();
+        String serviceName = "letter2service-" + UUID.randomUUID().toString();
 
         // Build Netifi Broker Connection
         BrokerClient netifi =
