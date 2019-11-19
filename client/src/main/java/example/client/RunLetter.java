@@ -38,8 +38,8 @@ public class RunLetter {
                 BrokerClient.tcp()
                         .group("example.client")                        // Group name of client
                         .destination("client1")                         // Name of this client instance
-                        .accessKey(8833333111127534L)
-                        .accessToken("Ih+hNsSdxLxAtHceTeEia2MGXSc=")
+                        .accessKey(8018673018060254L)
+                        .accessToken("TErdOHCI4aFd8HoJNdpZc/H8pRc=")
                         .host("localhost")                              // Netifi Broker Host
                         .port(8001)                                     // Netifi Broker Port
                         .disableSsl()
@@ -57,7 +57,7 @@ public class RunLetter {
 
         CountDownLatch latch = new CountDownLatch(100);
 
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 1_000; i++) {
             Flux.zip(letter, number)
                     .map(objects -> objects.getT1().getLetter() + objects.getT2().getNumber())
                     .doOnNext(s -> {
